@@ -1,0 +1,243 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  color: #00aaff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #66ccff;
+}
+
+/* ===== Navbar ===== */
+header {
+  background: rgba(10, 10, 10, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #00aaff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #ddd;
+}
+
+.nav-links li a.active {
+  color: #00aaff;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  color: #00aaff;
+  cursor: pointer;
+}
+
+/* ===== Page Layout ===== */
+main {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+h1, h2 {
+  color: #00aaff;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 15px;
+  border: 2px solid #00aaff;
+  border-radius: 6px;
+  color: #00aaff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00aaff;
+  color: #0d0d0d;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0a0a0a;
+  color: #888;
+  margin-top: 80px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* ===== Scroll Reveal Animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Theme Toggle ===== */
+.toggle-theme {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #00aaff;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00aaff;
+  transition: 0.3s;
+}
+.toggle-theme:hover {
+  background: #0077cc;
+}
+
+/* ===== Light Mode (White + Red Theme) ===== */
+body.light-mode {
+  background: #ffffff;
+  color: #111;
+}
+
+/* Navbar */
+body.light-mode header {
+  background: #fff;
+  border-bottom: 1px solid #e63946;
+}
+
+body.light-mode .logo {
+  color: #e63946;
+}
+
+body.light-mode .nav-links li a {
+  color: #e63946;
+}
+
+body.light-mode .nav-links li a.active {
+  color: #b00020;
+}
+
+/* Headings & Text */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode p {
+  color: #e63946;
+}
+
+/* Buttons */
+body.light-mode .btn {
+  border-color: #e63946;
+  color: #e63946;
+  background: transparent;
+}
+
+body.light-mode .btn:hover {
+  background: #e63946;
+  color: #fff;
+}
+
+/* Links */
+body.light-mode a {
+  color: #e63946;
+}
+body.light-mode a:hover {
+  color: #b00020;
+}
+
+/* Footer */
+body.light-mode footer {
+  background: #f2f2f2;
+  color: #e63946;
+  border-top: 1px solid #e63946;
+}
+
+/* Theme Toggle Button */
+body.light-mode .toggle-theme {
+  background: #e63946;
+  color: #fff;
+  box-shadow: 0 0 15px #e63946;
+}
+body.light-mode .toggle-theme:hover {
+  background: #b00020;
+}
